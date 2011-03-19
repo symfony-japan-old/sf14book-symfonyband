@@ -1,17 +1,65 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
+Page:
+  TopPage:
+    title:       トップページ
+    slug:        top
+    category:    ~
+    body:        トップページのコンテンツです。
+  AboutPage:
+    title:       Symfony楽団について
+    slug:        about
+    category:    ~
+    body:        Symfony楽団の紹介ページです。
+  JoinUsPage:
+    title:       メンバー募集
+    slug:        joinus
+    category:    ~
+    body:        Symfony楽団では、メンバーを募集しています！
+  NewsOpenPage:
+    title:       Symfony楽団のホームページがオープンしました
+    slug:        20101015-homepage-open
+    category:    news
+    body:        |
+                   本日、Symfony楽団のホームページをようやくオープンできました。
+                   ホームページでは、Symfony楽団に関するさまざまな情報を発信していきますので、みなさん応援よろしくお願いします！
+    created_at:  '2010-10-15 00:00:00'
+  NewsEvent1Page:
+    title:       2010年定期演奏会のご案内
+    slug:        concert-2010
+    category:    news
+    body:        |
+                   Symfony楽団の、2010年の定期演奏会についてのご案内です。
+                   日時：2010年12月24日　17時〜21時
+                   場所：Symfony城ホール
+                   入場料：5000円
+    created_at:  '2010-11-15 00:00:00'
+  NewsEvent2Page:
+    title:       Symfony楽団と一緒に新年を迎えよう！
+    slug:        countdown-to-2011
+    category:    news
+    body:        |
+                   2010年の締めくくりといたしまして、毎年恒例になっている「みんなで第九を歌って年を越そう！」イベントを今年も開催いたします。
+                   日時：2010年12月31日　22時〜翌5時
+                   場所：Symfony城ホール
+                   参加費：1000円
+                   食事や飲み物は参加者の持ち寄りになります。みなさんご自慢の料理を是非ご持参ください。
+    created_at:  '2010-12-06 00:00:00'
+  NewsJoinusPage:
+    title:       2011年の活動に向けて、メンバーを募集しています
+    slug:        20101021-joinus
+    category:    news
+    body:        |
+                   Symfony楽団では、私たちと一緒に音楽を楽しんでくれるメンバーを募集しています。
+                   来年の定期演奏会へ向けて、現在特に募集したいパートは
+                   ・トランペット
+                   ・サックス
+                   ですが、これ以外の方や、楽団の事務などを手伝っていただける方も大歓迎です！
+                   詳細は<a href="/page/joinus">メンバー募集</a>のページをご覧ください。
+    created_at:  '2010-12-20 00:00:00'
+  NewsEventReport:
+    title:       2010年の定期演奏会が無事終了しました
+    slug:        convert-2010-report
+    category:    news
+    body:        |
+                   2010年11月15日に開催した2010年の定期演奏会は、
+    created_at:  '2010-12-21 00:00:00'
+
