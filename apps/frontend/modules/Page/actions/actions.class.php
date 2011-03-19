@@ -25,6 +25,8 @@ class PageActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->page = PageTable::getInstance()->findOneBySlug('top');
+    // スラグパラメータを取得し、スラグからページを取得する
+    $slug = $request->getParameter('slug');
+    $this->page = PageTable::getInstance()->findOneBySlug($slug);
   }
 }
