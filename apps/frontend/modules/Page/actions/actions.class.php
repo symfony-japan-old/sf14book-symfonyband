@@ -29,4 +29,17 @@ class PageActions extends sfActions
     $slug = $request->getParameter('slug');
     $this->page = PageTable::getInstance()->findOneBySlug($slug);
   }
+
+  public function executeNewsShow(sfWebRequest $request)
+  {
+    // スラグパラメータを取得し、スラグからページを取得する
+    $slug = $request->getParameter('slug');
+    $this->page = PageTable::getInstance()->findOneBySlug($slug);
+  }
+
+  public function executeNewsList(sfWebRequest $request)
+  {
+    // カテゴリ名newsに対応するページの一覧を取得する
+    $this->pageList = PageTable::getInstance()->findByCategory('news');
+  }
 }
