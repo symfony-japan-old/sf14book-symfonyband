@@ -1,0 +1,18 @@
+Page:
+  actAs:
+    Timestampable: ~
+    Sluggable: ~
+  columns:
+    title:
+      type: string(100)
+      notnull: true
+      default: ''
+    body:
+      type: clob
+      notnull: true
+      default: ''
+    category:
+      type: string(32)
+      notnull: true
+      default: ''
+
