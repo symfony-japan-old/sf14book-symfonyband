@@ -1,0 +1,81 @@
+body {
+  background-color: #EEE;
+}
+
+a {
+  color: #09F;
+  border: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3C9;
+}
+
+li {
+  list-style: none;
+}
+
+#wrapper {
+  background-color: #FFF;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+#header {
+  background-color: #EEE;
+  padding-top: 20px;
+  margin-bottom: 0;
+  border-bottom: 2px solid #AAA;
+}
+
+#header h1 {
+  margin-top: 10px;
+  height: 65px;
+  margin-bottom: 5px;
+  background-image: url(../images/symfony.gif);
+  background-repeat: no-repeat;
+  text-align: right;
+}
+
+#menu {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#menu ul {
+  margin-bottom: 4px;
+}
+
+#menu li {
+  display: inline;
+  margin: 3px 0px 3px 0px;
+}
+
+#menu li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
+}
+
+#main {
+  margin-top: 15px;
+}
+
+#left li {
+  margin-bottom: 8px;
+}
+
+#right {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 10px;
+  color: #FFF;
+  font-weight: bold;
+  background-color: #6fb6d4;
+  border-top: 2px solid #999;
+}
