@@ -19,4 +19,8 @@ class HelloActions extends sfActions
   {
     $this->forward('default', 'module');
   }
+
+  public function executeWorld()
+  {
+  }
 }
