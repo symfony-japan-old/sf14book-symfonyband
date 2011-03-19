@@ -23,4 +23,8 @@ class HelloActions extends sfActions
   public function executeWorld()
   {
   }
+
+  public function executeJapanese()
+  {
+  }
 }
