@@ -1,20 +1,16 @@
-page_show:
-  url: /page/:slug
-  param: { module: Page, action: Show }
-
-# You can find more information about this file on the symfony website:
-# http://www.symfony-project.org/reference/1_4/en/10-Routing
-
-# default rules
 homepage:
-  url:   /
-  param: { module: default, action: index }
+  url:      /
+  param:    { module: Page, action: Show, slug: top }
 
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
+page_show:
+  url:      /page/:slug
+  param:    { module: Page, action: Show }
 
-default:
-  url:   /:module/:action/*
+news_list:
+  url:      /news
+  param:    { module: Page, action: NewsList }
+
+news_show:
+  url:      /news/:slug
+  param:    { module: Page, action: NewsShow }
+
