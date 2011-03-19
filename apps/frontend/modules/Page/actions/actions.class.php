@@ -17,7 +17,10 @@ class PageActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    $param1 = $request->getParameter('param1');
+    echo $param1; // foo
+    $param2 = $request->getParameter('param2');
+    echo $param2; // bar
   }
 
   public function executeShow(sfWebRequest $request)
