@@ -19,4 +19,9 @@ class PageActions extends sfActions
   {
     $this->forward('default', 'module');
   }
+
+  public function executeShow(sfWebRequest $request)
+  {
+    $this->page = PageTable::getInstance()->findOneBySlug('top');
+  }
 }
