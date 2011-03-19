@@ -19,4 +19,8 @@ class InquiryActions extends sfActions
   {
     $this->forward('default', 'module');
   }
+
+  public function executeNew(sfWebRequest $request)
+  {
+  }
 }
