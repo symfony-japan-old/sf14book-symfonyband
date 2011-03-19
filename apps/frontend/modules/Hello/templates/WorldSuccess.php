@@ -1,1 +1,1 @@
-<h2>Hello, World! <?php echo date('Y/m/d') ?></h2>
+<h2>Hello, Symfony!</h2>
