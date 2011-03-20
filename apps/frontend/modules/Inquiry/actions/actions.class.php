@@ -28,6 +28,8 @@ class InquiryActions extends sfActions
       $form->bind($request->getParameter($form->getName()));
       if ($form->isValid())
       {
+        $form->send($this->context, 'yourname@example.com', 'Symfony楽団ホームページからの問い合わせ');
+        $this->getUser()->setAttribute('inquiry_send', true);
         $this->redirect('Inquiry/Complete');
       }
     }
@@ -36,5 +38,8 @@ class InquiryActions extends sfActions
 
   public function executeComplete(sfWebRequest $request)
   {
+    $user = $this->getUser();
+    $this->redirectUnless($user->getAttribute('inquiry_send'), 'Inquiry/New');
+    $user->setAttribute('inquiry_send', null);
   }
 }
