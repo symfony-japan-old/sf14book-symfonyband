@@ -33,12 +33,33 @@ class InquiryForm extends BaseForm
       )),
     ));
     $this->setValidators(array(
-      'name'   => new sfValidatorString(),
-      'email'  => new sfValidatorEmail(),
-      'body'   => new sfValidatorString(),
+      'name'   => new sfValidatorString(array(
+        'required' => true,
+        'max_length' => 20,
+      ), array(
+        'required' => '未入力',
+        'max_length' => '20文字以内で入力してください',
+      )),
+      'email'  => new sfValidatorEmail(array(
+        'required' => true,
+      ), array(
+        'required' => '未入力',
+        'invalid'  => '正しいメールアドレスを入力してください',
+      )),
+      'body'   => new sfValidatorString(array(
+        'required' => true,
+        'max_length' => 1000,
+      ), array(
+        'required' => '未入力',
+        'max_length' => '1000文字以内で入力してください',
+      )),
       'join'   => new sfValidatorChoice(array(
         'choices' => array_keys(self::$joinChoices),
-       )),
+        'required' => true,
+      ), array(
+        'invalid' => '無効な値です',
+        'required' => '選択してください',
+      )),
     ));
     $this->widgetSchema->setNameFormat('inquiry[%s]');
     $this->widgetSchema->setLabels(array(
