@@ -30,6 +30,9 @@
             </div>
           </div>
           <div class="grid_9">
+            <div id="breadcrumb">
+              <?php include_slot('breadcrumb') ?>
+            </div>
             <div id="right">
               <?php echo $sf_content ?>
             </div>
