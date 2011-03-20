@@ -15,4 +15,8 @@ Page:
       type: string(32)
       notnull: true
       default: ''
+    author:
+      type:    string(30)
+      notnull: true
+      default: ''
 
