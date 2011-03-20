@@ -8,13 +8,16 @@
  * @property string $title
  * @property clob $body
  * @property string $category
+ * @property string $author
  * 
  * @method string getTitle()    Returns the current record's "title" value
  * @method clob   getBody()     Returns the current record's "body" value
  * @method string getCategory() Returns the current record's "category" value
+ * @method string getAuthor()   Returns the current record's "author" value
  * @method Page   setTitle()    Sets the current record's "title" value
  * @method Page   setBody()     Sets the current record's "body" value
  * @method Page   setCategory() Sets the current record's "category" value
+ * @method Page   setAuthor()   Sets the current record's "author" value
  * 
  * @package    symfonyband
  * @subpackage model
@@ -42,6 +45,12 @@ abstract class BasePage extends sfDoctrineRecord
              'notnull' => true,
              'default' => '',
              'length' => 32,
+             ));
+        $this->hasColumn('author', 'string', 30, array(
+             'type' => 'string',
+             'notnull' => true,
+             'default' => '',
+             'length' => 30,
              ));
     }
 
