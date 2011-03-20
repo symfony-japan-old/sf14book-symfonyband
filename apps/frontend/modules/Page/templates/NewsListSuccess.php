@@ -1,3 +1,7 @@
+<?php slot('breadcrumb')?>
+<?php echo link_to('Symfony楽団ホームページ', 'homepage') ?> >
+お知らせの一覧
+<?php end_slot() ?>
 <h2>お知らせの一覧</h2>
 <?php if (count($pageList)): ?>
   <ul>
