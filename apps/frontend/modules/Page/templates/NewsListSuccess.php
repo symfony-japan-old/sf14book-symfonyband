@@ -3,12 +3,12 @@
 お知らせの一覧
 <?php end_slot() ?>
 <h2>お知らせの一覧</h2>
-<?php if (count($pageList)): ?>
+<?php if ($pager->getNbResults()): ?>
   <ul>
-    <?php foreach ($pageList as $page): ?>
+    <?php foreach ($pager->getResults() as $page): ?>
       <li>
         <?php echo $page->getDateTimeObject('created_at')->format('m/d') ?>
-        <?php echo link_to($page->getTitle(), 'news_show', array('slug'=>$page->getSlug())) ?>
+        <?php echo link_to($page->getTitle(), 'news_show',  array('slug'=>$page->getSlug())) ?>
       </li>
     <?php endforeach; ?>
   </ul>
