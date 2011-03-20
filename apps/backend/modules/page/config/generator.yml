@@ -14,8 +14,11 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        title:             ページの一覧
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title:             ページの編集
+      new:
+        title:             ページの新規作成
