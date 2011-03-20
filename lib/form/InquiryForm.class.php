@@ -10,11 +10,26 @@ class InquiryForm extends BaseForm
   public function configure()
   {
     $this->setWidgets(array(
-      'name'   => new sfWidgetFormInput(),
-      'email'  => new sfWidgetFormInput(),
-      'body'   => new sfWidgetFormTextarea(),
+      'name'   => new sfWidgetFormInput(array(
+      ), array(
+        'size'         => 30,
+        'maxlength'    => 20,
+      )),
+      'email'  => new sfWidgetFormInput(array(
+      ), array(
+        'size'         => 50,
+        'maxlength'    => 100,
+      )),
+      'body'   => new sfWidgetFormTextarea(array(
+      ), array(
+        'cols'         => 40,
+        'rows'         => 10,
+      )),
       'join'   => new sfWidgetFormChoice(array(
         'choices'  => self::$joinChoices,
+        'multiple' => false,
+        'expanded' => true,
+        'default'  => 3,
       )),
     ));
     $this->setValidators(array(
