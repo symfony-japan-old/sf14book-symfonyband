@@ -33,4 +33,8 @@ class InquiryActions extends sfActions
     }
     $this->form = $form;
   }
+
+  public function executeComplete(sfWebRequest $request)
+  {
+  }
 }
