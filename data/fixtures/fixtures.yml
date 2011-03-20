@@ -9,6 +9,7 @@ Page:
     slug:        about
     category:    ~
     body:        Symfony楽団の紹介ページです。
+    author:      Symfony楽団長
   JoinUsPage:
     title:       メンバー募集
     slug:        joinus
