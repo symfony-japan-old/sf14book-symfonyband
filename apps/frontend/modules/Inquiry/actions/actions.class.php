@@ -22,5 +22,7 @@ class InquiryActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+    $form = new InquiryForm();
+    $this->form = $form;
   }
 }
