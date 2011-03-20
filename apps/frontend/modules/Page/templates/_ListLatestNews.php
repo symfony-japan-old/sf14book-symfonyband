@@ -1,7 +1,7 @@
 <h3>お知らせ一覧</h3>
-<?php if (count($pageList)): ?>
+<?php if ($latestNewsPager->getNbResults()): ?>
   <ul>
-    <?php foreach ($pageList as $page): ?>
+    <?php foreach ($latestNewsPager->getResults() as $page): ?>
       <li>
         <?php echo $page->getDateTimeObject('created_at')->format('m/d') ?>
         <?php echo link_to($page->getTitle(), 'news_show', array('slug'=>$page->getSlug())) ?>
