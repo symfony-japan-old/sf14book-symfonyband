@@ -26,7 +26,7 @@
         <div class="container_12">
           <div class="grid_3">
             <div id="left">
-              <p>新着情報一覧</p>
+              <?php include_component('Page', 'ListLatestNews') ?>
             </div>
           </div>
           <div class="grid_9">
