@@ -39,7 +39,10 @@ class PageActions extends sfActions
 
   public function executeNewsList(sfWebRequest $request)
   {
-    // カテゴリ名newsに対応するページの一覧を取得する
-    $this->pageList = PageTable::getInstance()->findByCategory('news');
+    $pager = new sfDoctrinePager('Page', 999);
+    $pager->setQuery(PageTable::queryLatestNews());
+    $pager->setPage(1);
+    $pager->init();
+    $this->pager = $pager;
   }
 }
