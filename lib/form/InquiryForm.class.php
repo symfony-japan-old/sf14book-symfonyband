@@ -26,5 +26,11 @@ class InquiryForm extends BaseForm
        )),
     ));
     $this->widgetSchema->setNameFormat('inquiry[%s]');
+    $this->widgetSchema->setLabels(array(
+      'name'   => 'お名前',
+      'email'  => 'メールアドレス',
+      'body'   => 'お問い合わせ内容',
+      'join'   => '入団をご希望ですか？',
+    ));
   }
 }
